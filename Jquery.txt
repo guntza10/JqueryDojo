@@ -1,0 +1,42 @@
+Jquery
+-> คือ javascript library ไม่ใช่ programming language
+    -> เอาไว้จัดการ Html/DOM
+    -> เอาไว้จัดการ css
+    -> ทำ Html event method
+    -> ทำ Effect , animation
+    -> ใช้กับ Ajax
+-> Jquery Syntax
+    -> $(selector).action() => 
+        Ex.
+            -> $("p").hide();       => element ที่เป็น tag p ทั้งหมด hide
+            -> $(".test").hide();   => element ที่เป็น class test ทั้งหมด hide
+            -> $("#test").hide();   => element ที่เป็น id test hide
+    -> ก่อนที่จะเขียน Jquery เราควรทำให้ document ready ก่อน
+        ->แบบเต็ม
+            $(document).ready(function() {
+                // Jquery method
+            });
+        ->แบบย่อ
+            $(function() {
+                // Jquery method
+            });
+    -> Jquery Events
+        -> Mouse Events
+            -click
+            -dbclick
+            -mouseenter
+            -mouseleave
+        -> Keyboard Events
+            -keypress
+            -keydown
+            -keyup
+        -> Form Events
+            -submit
+            -change
+            -focus
+            -blur
+        -> Document/Window Events
+            -load
+            -resize 
+            -scroll
+            -unload

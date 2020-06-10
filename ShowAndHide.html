@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Show && Hide</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Jquery => Show,Hide,Toggle</h1>
+
+        <div class="container">
+            <button id="hide">Hide</button>
+            <button id="show">Show</button>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dolor minus quibusdam ducimus, iure inventore corporis in beatae dolore assumenda magnam repellendus asperiores pariatur. Quia harum ad molestias perferendis non! Nulla, neque illo nihil voluptas
+                esse odit earum atque et voluptates enim corrupti consequatur, iste quis tempora! Assumenda minus ea voluptate minima, saepe consectetur a, sit quis, ratione distinctio accusamus? Consequatur natus dolore amet laudantium, cupiditate, ullam
+                non repudiandae quia fuga quidem soluta tenetur mollitia autem modi hic quam quos ex. Omnis voluptas nobis, quos veritatis facilis fugiat eius facere. Atque libero odio aliquam eveniet ut cumque, quasi aut repudiandae officia quos laboriosam,
+                reiciendis molestias minus, optio necessitatibus sint repellat! Omnis eveniet totam veritatis esse corrupti. Doloribus assumenda optio eveniet?
+
+            </p>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" type="text/javascript"></script>
+    <!-- Jquery เขียนใส่ script -->
+    <!--  [$(selector).action(speed,callback)] *speed คือหน่วงเวลาทำ , callback เป็น function -->
+    <script>
+        $(document).ready(function() {
+            // $("#hide").click(function() {
+            //     $("p").hide(1000); // หน่วงเวลาได้
+            // });
+
+            $("#hide").click(function() {
+                $("p").toggle(1000);
+            });
+
+            // $("#show").click(function() {
+            //     $("p").show();
+            // });
+
+        });
+    </script>
+</body>
+
+</html>
