@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>CallBackFunction</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        
+        p {
+            width: 500px;
+            height: auto;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Jquery => CallBackFunction</h1>
+        <button>Hide</button>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus error porro magnam aut, rem quae quos perspiciatis dolore id itaque exercitationem dignissimos doloremque. Incidunt, expedita reprehenderit? Asperiores rerum porro ducimus.
+        </p>
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" type="text/javascript"></script>
+
+    <script>
+        // callback function คือการที่มันทำ action เสร็จก่อนแล้วค่อยมาทำคำสั่งใน function callback
+        $(document).ready(function() {
+            $("button").click(function() {
+                // callback ที่ถูก
+                $("p").hide("slow", function() {
+                    alert('The paragraph is now hidden');
+                });
+
+                // callback ที่ผิด => การใช้คำสั่ง action มันเป็น callback ถ้าเราไม่เอาสิ่งที่เราต้องการจะทำมาทำใน call back 
+                // มันจะไม่รอให้ action ที่เป็น call back เสร็จ มันจะทำคำสั่งต่อไปเลย (asynchronous)
+                // $("p").hide("slow");
+                // alert('The paragraph is now hidden');
+            });
+        });
+    </script>
+</body>
+
+</html>
